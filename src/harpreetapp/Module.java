@@ -1,7 +1,7 @@
 
 package harpreetapp;
 
-public class Module {
+public class Module {   //class to abstract the module
 	private String code;
 	private String title;
 	private String tutor;
@@ -12,11 +12,11 @@ public class Module {
 	private String assessmentType;
 	private double percentageMark;
 	
-	public Module() {}
+	public Module() {}  //default constructor
 	
 	public Module(String code, String title, String tutor, String courseNumber,
 			String courseTitle, String issueDate, String dueDate,
-			String assessmentType, double percentageMark) {
+			String assessmentType, double percentageMark) {     //constructor taking all fields as input
 		super();
 		this.code = code;
 		this.title = title;
@@ -28,7 +28,7 @@ public class Module {
 		this.assessmentType = assessmentType;
 		this.percentageMark = percentageMark;
 	}
-
+           //declare all getters and setters
 	public String getCode() {
 		return code;
 	}
@@ -100,16 +100,5 @@ public class Module {
 	public void setPercentageMark(double percentageMark) {
 		this.percentageMark = percentageMark;
 	}
-
-	@Override
-	public String toString() {
-		return "Module [code=" + code + ", title=" + title + ", tutor=" + tutor
-				+ ", courseNumber=" + courseNumber + ", courseTitle="
-				+ courseTitle + ", issueDate=" + issueDate + ", dueDate="
-				+ dueDate + ", assessmentType=" + assessmentType
-				+ ", percentageMark=" + percentageMark + "]";
-	}
-	
-	
 	
 }
