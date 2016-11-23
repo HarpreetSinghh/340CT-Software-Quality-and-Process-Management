@@ -74,5 +74,31 @@ public class ECSGui extends JFrame{         //the GUI class
 				String _assessmentType = assessmentType.getText();
 				double _percentageMark = Double.parseDouble(percentageMark.getText());
 				module = new Module(_code, _title, _tutor, _courseNumber, _courseTitle, _issueDate, _dueDate, _assessmentType, _percentageMark);
-
+				System.out.println(module);
+                                String insertquery = "insert into DATA values ('"+_code+"','"+_title+"','"+_tutor+"','"
+                                        +_courseNumber+"','"+_courseTitle+"','"+_issueDate+"','"+_dueDate+"','"+_assessmentType+"','"
+                                        +Double.toString(_percentageMark)+"')";
+                                DBclass db = new DBclass(insertquery);
+                                DBclass db1 = new DBclass(_code,_courseNumber);
 			}
+		});
+		jPanel.add(codeLabel);
+		jPanel.add(code);
+		jPanel.add(titleLabel);
+		jPanel.add(title);
+		jPanel.add(tutorLabel);
+		jPanel.add(tutor);
+		jPanel.add(courseNumberLabel);
+		jPanel.add(courseNumber);
+		jPanel.add(courseTitleLabel);
+		jPanel.add(courseTitle);
+		jPanel.add(issueDateLabel);
+		jPanel.add(issueDate);
+		jPanel.add(dueDateLabel);
+		jPanel.add(dueDate);
+		jPanel.add(assessmentTypeLabel);
+		jPanel.add(assessmentType);
+		jPanel.add(percentageMarkLabel);
+		jPanel.add(percentageMark);
+		JSplitPane sp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+   

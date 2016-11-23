@@ -100,5 +100,3 @@ public class Module {   //class to abstract the module
 	public void setPercentageMark(double percentageMark) {
 		this.percentageMark = percentageMark;
 	}
-	
-}
