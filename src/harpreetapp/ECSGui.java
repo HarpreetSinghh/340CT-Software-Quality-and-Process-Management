@@ -101,4 +101,53 @@ public class ECSGui extends JFrame{         //the GUI class
 		jPanel.add(percentageMarkLabel);
 		jPanel.add(percentageMark);
 		JSplitPane sp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
-   
+        sp.setResizeWeight(0.9);
+        sp.setEnabled(false);
+        sp.setDividerSize(5);
+
+        sp.add(jPanel);
+        sp.add(submit);
+        add(sp, BorderLayout.CENTER);
+		setVisible(true);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		pack();
+	}
+        
+        public ECSGui(String mcode,String mtitle,String mtutor,String cwnum,String cwtitle,String isdate,String ddate,String astype,String percemark){
+                super("Result");
+                this.s = s;
+		setLayout(new BorderLayout());
+		jPanel = new JPanel();
+		GridLayout layout = new GridLayout(9,2);
+		layout.setHgap(5);
+		layout.setVgap(5);
+		jPanel.setLayout(layout);
+             JLabel _code =new JLabel(mcode, JLabel.CENTER);
+             JLabel _title= new JLabel(mtitle, JLabel.CENTER);
+             JLabel _tutor = new JLabel(mtutor, JLabel.CENTER);
+             JLabel _courseNumber=new JLabel(cwnum, JLabel.CENTER);
+             JLabel _courseTitle = new JLabel(cwtitle, JLabel.CENTER);
+             JLabel _issueDate=new JLabel(isdate, JLabel.CENTER);
+             JLabel _dueDate=new JLabel(ddate, JLabel.CENTER);
+             JLabel _assessmentType=new JLabel(astype, JLabel.CENTER);
+             JLabel _percentageMark=new JLabel(percemark, JLabel.CENTER);
+                jPanel.add(codeLabel);      //add the components to the respetive containers to be displayed
+                jPanel.add(_code);
+		jPanel.add(titleLabel);
+		jPanel.add(_title);
+		jPanel.add(tutorLabel);
+		jPanel.add(_tutor);
+		jPanel.add(courseNumberLabel);
+		jPanel.add(_courseNumber);
+		jPanel.add(courseTitleLabel);
+		jPanel.add(_courseTitle);
+		jPanel.add(issueDateLabel);
+		jPanel.add(_issueDate);
+		jPanel.add(dueDateLabel);
+		jPanel.add(_dueDate);
+		jPanel.add(assessmentTypeLabel);
+		jPanel.add(_assessmentType);
+		jPanel.add(percentageMarkLabel);
+		jPanel.add(_percentageMark);
+                JSplitPane sp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
