@@ -100,3 +100,16 @@ public class Module {   //class to abstract the module
 	public void setPercentageMark(double percentageMark) {
 		this.percentageMark = percentageMark;
 	}
+        //override toString method to print all elements 
+	@Override
+	public String toString() {
+		return "Module [code=" + code + ", title=" + title + ", tutor=" + tutor
+				+ ", courseNumber=" + courseNumber + ", courseTitle="
+				+ courseTitle + ", issueDate=" + issueDate + ", dueDate="
+				+ dueDate + ", assessmentType=" + assessmentType
+				+ ", percentageMark=" + percentageMark + "]";
+	}
+	
+	
+	
+}
