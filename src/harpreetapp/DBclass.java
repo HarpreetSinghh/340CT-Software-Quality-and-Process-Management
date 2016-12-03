@@ -39,3 +39,23 @@ public class DBclass {
             System.out.println(e.getMessage());
         }
     }
+    //inserts query
+    DBclass(String insertQuery){
+        this.Host = "jdbc:derby://localhost:1527/HarpreetDB";
+        this.uName ="harpreet";
+        this.uPass = "harpreet";
+        try{
+        Connection con = DriverManager.getConnection(this.Host, this.uName, this.uPass);
+        Statement stmt = con.createStatement();
+        
+        stmt.executeUpdate(insertQuery);
+        
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+//    public static void main(String[] args){
+//       // DBclass db= new DBclass();
+//    }
+}
