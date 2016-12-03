@@ -151,3 +151,28 @@ public class ECSGui extends JFrame{         //the GUI class
 		jPanel.add(percentageMarkLabel);
 		jPanel.add(_percentageMark);
                 JSplitPane sp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+        sp.setResizeWeight(0.9);
+        sp.setEnabled(false);
+        sp.setDividerSize(5);
+
+        sp.add(jPanel);
+        
+        add(sp, BorderLayout.CENTER);
+		setVisible(true);
+		
+		//setDefaultCloseOperation(EXIT_ON_CLOSE);
+		pack();
+                
+        }
+	
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {     //best practices to call Gui is on a seperate thread. this method achieves this
+			
+			@Override
+			public void run() {
+				ECSGui ecs = new ECSGui("Electronic Coursework Submission");
+			}
+		});
+		
+	}
+}
