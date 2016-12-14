@@ -2,7 +2,7 @@
 
 ### Harpreet Singh, Luke and Alen Thomas. 
 
-###Functionality 
-#Alen = Download Coversheet
-#Harpreet = Enter CW Details
-#Luke = Reference Code/Upload Coversheet
+#Functionality 
+###Alen = Download Coversheet
+###Harpreet = Enter CW Details
+###Luke = Reference Code/Upload Coversheet
