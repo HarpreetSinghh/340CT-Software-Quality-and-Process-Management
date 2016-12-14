@@ -76,6 +76,29 @@
                     e1.printStackTrace();
                 }
                 outputLabel.setText("File Downloaded as Output.txt");
+                
+                //Display the window.
+                frame.pack();
+                frame.setVisible(true);
+
+            }
+        });
+        moduleCodePanel = new ECSPanel(this, "Module Code", "String");
+
+        moduleTitlePanel = new ECSPanel(this, "Title", "String");
+        tutorPanel = new ECSPanel(this, "Module Tutor", "String");
+
+        courseNumberPanel = new ECSPanel(this, "CourseWork Number", "number");
+        courseTitlePanel = new ECSPanel(this, "CourseWork Title", "String");
+        issueDatePanel = new ECSPanel(this, "Issue Date", "date");
+
+        dueDatePanel = new ECSPanel(this, "Due Date", "date");
+
+        dueTimePanel = new ECSPanel(this, "Due Time", "time");
+
+        typePanel = new ECSPanel(this, "Assessment Type", "String");
+
+        markPanel = new ECSPanel(this, "% of Module Mark", "number");
 
 
         
