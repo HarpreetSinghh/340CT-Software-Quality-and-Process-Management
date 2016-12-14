@@ -46,3 +46,24 @@
             }
         });
         downloadButton.addActionListener(new ActionListener() 
+ {
+            Student student;
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    PrintWriter writer = new PrintWriter("Output.txt", "UTF-8");
+                    writer.println( "Module Code : " + moduleCodePanel.textField.getText());
+                    writer.println("Module Title : " + moduleTitlePanel.textField.getText());
+                    writer.println("Module Tutor : " + tutorPanel.textField.getText());
+                    writer.println("CourseWork Number : " + courseNumberPanel.textField.getText());
+                    writer.println("CourseWork Title : " + courseTitlePanel.textField.getText());
+                    writer.println("Issue Date : " + issueDatePanel.textField.getText());
+                    writer.println("Due Date : " + dueDatePanel.textField.getText());
+                    writer.println("Due Time : " + dueTimePanel.textField.getText());
+                    writer.println("Assessment Type : " + typePanel.textField.getText());
+                    writer.println("% of Module Mark : " + markPanel.textField.getText());
+                    writer.println("Student ID" + studentIDText.getText());
+                    writer.println("Student Name" + studentNameText.getText());
+                    student = new Student(studentIDText.getText(), studentNameText.getText());
+                    login.put(studentIDText.getText(), student);
+
+        
