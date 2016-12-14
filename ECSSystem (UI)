@@ -65,5 +65,17 @@
                     writer.println("Student Name" + studentNameText.getText());
                     student = new Student(studentIDText.getText(), studentNameText.getText());
                     login.put(studentIDText.getText(), student);
+                    
+                    student.setInfo(dueTimePanel.textField.getText(), moduleCodePanel.textField.getText(), moduleTitlePanel.textField.getText(), tutorPanel.textField.getText(),courseNumberPanel.textField.getText(), courseTitlePanel.textField.getText(),issueDatePanel.textField.getText(), dueDatePanel.textField.getText(), typePanel.textField.getText(), markPanel.textField.getText());
+                    writer.close();
+                }
+                catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                }
+                catch (UnsupportedEncodingException e1) {
+                    e1.printStackTrace();
+                }
+                outputLabel.setText("File Downloaded as Output.txt");
+
 
         
