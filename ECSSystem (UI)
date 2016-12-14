@@ -140,6 +140,6 @@
         mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
 
         mainPane.add(Box.createGlue());
-
-
+        
+    }
         
