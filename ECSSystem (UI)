@@ -99,6 +99,47 @@
         typePanel = new ECSPanel(this, "Assessment Type", "String");
 
         markPanel = new ECSPanel(this, "% of Module Mark", "number");
+        
+        mainPane = new JPanel();
+        mainPane.setLayout(new BoxLayout(mainPane, BoxLayout.PAGE_AXIS));
+        if (MULTICOLORED) {
+            mainPane.setOpaque(true);
+            mainPane.setBackground(new Color(255, 0, 0));
+        }
+        mainPane.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(moduleCodePanel);
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(moduleTitlePanel);
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(tutorPanel);
+
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(courseNumberPanel);
+
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(courseTitlePanel);
+
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(issueDatePanel);
+
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(dueDatePanel);
+
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(dueTimePanel);
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(typePanel);
+
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(markPanel);
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(javaButton);
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        mainPane.add(loginButton);
+        mainPane.add(Box.createRigidArea(new Dimension(0, 5)));
+
+        mainPane.add(Box.createGlue());
 
 
         
