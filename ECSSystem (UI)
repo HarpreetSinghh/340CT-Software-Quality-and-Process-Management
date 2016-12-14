@@ -142,4 +142,21 @@
         mainPane.add(Box.createGlue());
         
     }
+    
+        private static void createAndShowGUI() {
+
+        JFrame frame = new JFrame("ECSSystem");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        ECSSystem ECSSystem = new ECSSystem();
+        ECSSystem.mainPane.setOpaque(true); //content panes must be opaque
+        frame.setContentPane(ECSSystem.mainPane);
+
+        //Display the window.
+        frame.pack();
+        frame.setVisible(true);
+
+    }
+
+    
         
