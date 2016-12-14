@@ -1,0 +1,21 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.*;
+
+public class ECSSystem
+{
+    static ECSPanel dueTimePanel, moduleCodePanel, moduleTitlePanel, tutorPanel,courseNumberPanel, courseTitlePanel,issueDatePanel, dueDatePanel, typePanel, markPanel;
+    final static boolean MULTICOLORED = false;
+    JButton downloadButton = new JButton("Download");
+    JTextField studentIDText = new JTextField(20);
+    JPanel mainPane;
+    JTextArea log;
+    JLabel outputLabel = new JLabel();
+    JTextField studentNameText = new JTextField(20);
+
+    Map<String, Student> login = new HashMap<>();
+}
